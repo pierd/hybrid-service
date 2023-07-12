@@ -1,0 +1,24 @@
+[package]
+name = "hybrid-service"
+version = "0.1.0"
+edition = "2021"
+authors = ["Kuba Jaroszewski <jakub.jaroszewski@gmail.com>"]
+description = "Helper for creating single `MakeService` from a Web `MakeService` and gRPC (tonic) `Service`"
+repository = "https://github.com/pierd/hybrid-service"
+keywords = [
+    "networking",
+    "web",
+    "http",
+    "grpc",
+]
+categories = ["network-programming", "web-programming"]
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+hyper = { version = "0.14" }
+pin-project = "1"
+tower = "0.4"
