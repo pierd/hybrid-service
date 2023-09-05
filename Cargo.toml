@@ -1,6 +1,6 @@
 [package]
 name = "hybrid-service"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Kuba Jaroszewski <jakub.jaroszewski@gmail.com>"]
 description = "Helper for creating single `MakeService` from a Web `MakeService` and gRPC (tonic) `Service`"
@@ -19,6 +19,10 @@ license = "MIT OR Apache-2.0"
 path = "src/lib.rs"
 
 [dependencies]
+axum = { version = "0.6", optional = true}
 hyper = { version = "0.14" }
 pin-project = "1"
 tower = "0.4"
+
+[features]
+axum = ["dep:axum"]
